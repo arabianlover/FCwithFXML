@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.financecalcrestr.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <VBox>
+
+        <Text fx:id="enterTheNewPurchase"/>
+        <HBox>
+            <Text fx:id="name"/>
+            <TextField fx:id="addName"/>
+            <Text fx:id="price"/>
+            <TextField fx:id="addPrice"/>
+            <Text fx:id="date"/>
+            <DatePicker fx:id="datePicker"/>
+            <ComboBox fx:id="allTypesComboBox"/>
+            <Button text="Add purchase" onAction="#onButtonAddPurchaseClick"/>
+        </HBox>
+        <Text fx:id="warningMessage"/>
+    </VBox>
+    <VBox>
+        <Text fx:id="search"/>
+        <HBox>
+            <Text fx:id="from"/>
+            <DatePicker fx:id="fromDatePicker"/>
+            <Text fx:id="to"/>
+            <DatePicker fx:id="toDatePicker"/>
+            <ComboBox fx:id="comboBoxTypes"/>
+            <Button text="Ok" onAction="#onButtonGetDateInfoClick"/>
+        </HBox>
+    </VBox>
+    <VBox>
+        <Text fx:id="dateInfo"/>
+        <TextArea fx:id="allPurchasesInPeriod"/>
+        <Text fx:id="sumOut"/>
+    </VBox>
+</VBox>
+
+
